@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recambios Mercedes – Tienda online de recambios para Mercedes</title>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Cabecera con navegación -->
+  <header>
+    <div class="container">
+      <h1 class="logo">Recambios Mercedes</h1>
+      <nav>
+        <ul>
+          <li><a href="#categorias">Categorías</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#sobre">Sobre nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#registro">Profesionales</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sección principal con mensaje de bienvenida -->
+  <section
+    class="hero"
+    style="background-image: url('assets/gears-bg.png');"
+  >
+    <div class="hero-content">
+      <h2>Encuentra el recambio perfecto para tu Mercedes</h2>
+      <p>
+        Amplio catálogo de piezas y accesorios originales con envío rápido.
+      </p>
+      <a href="#productos" class="btn">Ver productos</a>
+    </div>
+  </section>
+
+  <!-- Sección de búsqueda por referencia o VIN -->
+  <section id="buscador" class="buscador section">
+    <div class="container">
+      <h2>Busca por referencia o VIN</h2>
+      <div class="vin-search">
+        <input
+          type="text"
+          id="refInput"
+          placeholder="Referencia de pieza..."
+        />
+        <input
+          type="text"
+          id="vinInput"
+          placeholder="VIN (17 caracteres)..."
+        />
+        <button id="vinSearchBtn" class="btn">Buscar</button>
+      </div>
+      <div id="vinResults" class="search-results"></div>
+    </div>
+  </section>
+
+  <!-- Sección de categorías destacadas -->
+  <section id="categorias" class="categorias section">
+    <div class="container">
+      <h2>Categorías principales</h2>
+      <div class="categoria-grid">
+        <!-- Motor y Embrague -->
+        <div class="categoria-card">
+          <i class="fas fa-cogs"></i>
+          <h3>Motor y Embrague</h3>
+          <p>
+            Componentes de motor, embrague y transmisión para mantener tu Mercedes en
+            óptimas condiciones.
+          </p>
+        </div>
+        <!-- Sistema de Frenos -->
+        <div class="categoria-card">
+          <i class="fas fa-stopwatch"></i>
+          <h3>Sistema de Frenos</h3>
+          <p>
+            Discos, pastillas y demás elementos de frenado para garantizar tu seguridad.
+          </p>
+        </div>
+        <!-- Sistema Eléctrico -->
+        <div class="categoria-card">
+          <i class="fas fa-bolt"></i>
+          <h3>Sistema Eléctrico</h3>
+          <p>
+            Baterías, alternadores y componentes eléctricos de calidad para tu vehículo.
+          </p>
+        </div>
+        <!-- Suspensión y Dirección -->
+        <div class="categoria-card">
+          <i class="fas fa-car"></i>
+          <h3>Suspensión y Dirección</h3>
+          <p>
+            Amortiguadores, brazos de dirección y componentes para un manejo suave y
+            preciso.
+          </p>
+        </div>
+        <!-- Carrocería y Exterior -->
+        <div class="categoria-card">
+          <i class="fas fa-car-side"></i>
+          <h3>Carrocería y Exterior</h3>
+          <p>
+            Espejos, carrocería y partes exteriores para mantener la estética de tu
+            Mercedes.
+          </p>
+        </div>
+        <!-- Filtros y Aceites -->
+        <div class="categoria-card">
+          <i class="fas fa-oil-can"></i>
+          <h3>Filtros y Aceites</h3>
+          <p>
+            Filtros de aire, aceite y lubricantes para el mantenimiento periódico.
+          </p>
+        </div>
+        <!-- Accesorios y Equipamiento -->
+        <div class="categoria-card">
+          <i class="fas fa-toolbox"></i>
+          <h3>Accesorios y Equipamiento</h3>
+          <p>
+            Complementos, accesorios y kits de equipamiento para personalizar tu Mercedes al
+            máximo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de productos destacados -->
+  <section id="productos" class="productos section">
+    <div class="container">
+      <h2>Productos destacados</h2>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Buscar productos..."
+        class="search-input"
+      />
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+  </section>
+
+  <!-- Sección sobre la empresa -->
+  <section id="sobre" class="sobre section">
+    <div class="container">
+      <h2>Sobre nosotros</h2>
+      <p>
+        Somos especialistas en recambios para vehículos Mercedes‑Benz con más de
+        10 años de experiencia en el sector. Ofrecemos piezas originales y
+        compatibles, asesoramiento profesional y un servicio de atención
+        personalizado para garantizar que encuentres exactamente lo que
+        necesitas.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección de contacto -->
+  <section id="contacto" class="contacto section">
+    <div class="container">
+      <h2>Contacto</h2>
+      <p>
+        ¿Tienes dudas o necesitas ayuda? Ponte en contacto con nosotros y te
+        responderemos lo antes posible.
+      </p>
+      <form id="contactForm">
+        <input type="text" name="nombre" placeholder="Nombre" required />
+        <input
+          type="email"
+          name="email"
+          placeholder="Correo electrónico"
+          required
+        />
+        <textarea
+          name="mensaje"
+          placeholder="Mensaje"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Sección de registro para profesionales -->
+  <section id="registro" class="registro section">
+    <div class="container">
+      <h2>Registro de profesionales</h2>
+      <p>
+        Si eres recambista, taller, desguace o cualquier profesional del sector,
+        crea tu cuenta para acceder a ventajas exclusivas.
+      </p>
+      <form id="profesionalForm">
+        <input type="text" name="nombre" placeholder="Nombre completo" required />
+        <input type="email" name="email" placeholder="Correo profesional" required />
+        <input type="text" name="empresa" placeholder="Nombre de empresa" required />
+        <input type="text" name="telefono" placeholder="Teléfono" required />
+        <select name="tipo" required>
+          <option value="" disabled selected>Tipo de profesional</option>
+          <option value="recambista">Recambista</option>
+          <option value="taller">Taller</option>
+          <option value="desguace">Desguace</option>
+          <option value="otro">Otro</option>
+        </select>
+        <button type="submit" class="btn">Crear cuenta</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Recambios Mercedes. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
